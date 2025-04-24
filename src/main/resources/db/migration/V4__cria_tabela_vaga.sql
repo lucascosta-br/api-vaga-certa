@@ -1,0 +1,6 @@
+CREATE TABLE vaga (
+    id SERIAL PRIMARY KEY,
+    numero VARCHAR(10) UNIQUE NOT NULL,
+    tipo VARCHAR(20) NOT NULL, -- Enum simulada (FIXA ou VISITANTE)
+    morador_id INTEGER UNIQUE REFERENCES morador(id) ON DELETE SET NULL
+);
