@@ -1,8 +1,8 @@
 CREATE TABLE veiculo (
     id SERIAL PRIMARY KEY,
-    marca VARCHAR(50),
-    modelo VARCHAR(50),
-    cor VARCHAR(30),
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    cor VARCHAR(30) NOT NULL,
     placa VARCHAR(15) UNIQUE NOT NULL,
     morador_id INTEGER REFERENCES morador(id) ON DELETE SET NULL,
     visitante_id INTEGER REFERENCES visitante(id) ON DELETE SET NULL
