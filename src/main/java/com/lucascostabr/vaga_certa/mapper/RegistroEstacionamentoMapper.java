@@ -12,7 +12,14 @@ import java.util.List;
 public interface RegistroEstacionamentoMapper {
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "dataEntrada", ignore = true)
+    @Mapping(target = "dataSaida", ignore = true)
     RegistroEstacionamento paraEntity(RegistroEstacionamentoRequestDTO dto);
+
+    @Mapping(source = "vaga.numero", target = "numeroVaga")
+    @Mapping(source = "veiculo.placa", target = "placaVeiculo")
+    @Mapping(source = "visitante.nome", target = "nomeVisitante")
+    @Mapping(source = "morador.nome", target = "nomeMorador")
 
     RegistroEstacionamentoResponseDTO paraDTO(RegistroEstacionamento registroEstacionamento);
 

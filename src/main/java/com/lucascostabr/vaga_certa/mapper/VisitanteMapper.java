@@ -12,6 +12,7 @@ import java.util.List;
 public interface VisitanteMapper {
 
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "veiculos", ignore = true)
     Visitante paraEntity(VisitanteRequestDTO dto);
 
     VisitanteResponseDTO paraDTO(Visitante visitante);
