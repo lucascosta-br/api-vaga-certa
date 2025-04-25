@@ -2,7 +2,7 @@ package com.lucascostabr.vaga_certa.dto.registro;
 
 import java.time.LocalDateTime;
 
-public record RegistroResponseDTO(
+public record RegistroEstacionamentoResponseDTO(
         Long id,
         LocalDateTime dataEntrada,
         LocalDateTime dataSaida,
